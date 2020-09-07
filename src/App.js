@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Main from './components/Main'
 function App() {
-  return ( 
+  return (
     <div>
-      <h1>778888</h1>
+      <Main />
     </div>
   );
 }
