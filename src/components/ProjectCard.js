@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     media: {
         height: 0,
-        paddingTop: '65%', // 16:9
+        paddingTop: '85%', // 16:9
     },
     expand: {
         transform: 'rotate(0deg)',
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const ProjectCard = (props) => {
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(true);
+    const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
@@ -67,7 +67,7 @@ const ProjectCard = (props) => {
                 <CardMedia
                     className={classes.media}
                     image={props.cover}
-                    title="Paella dish"
+                   
                 />
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
@@ -94,7 +94,7 @@ const ProjectCard = (props) => {
                         <ExpandMoreIcon />
                     </IconButton>
                 </CardActions>
-                <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <Collapse in={expanded} timeout="auto" unmountOnExit style={{height:'500px'}}>
                     <CardContent>
                         <Typography paragraph>說明:</Typography>
                         <Typography paragraph>

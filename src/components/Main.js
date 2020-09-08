@@ -8,6 +8,7 @@ import vue from '../assets/Logo/vue.png'
 import reactimg from '../assets/Logo/react.jpg'
 import java from '../assets/Logo/java.png'
 import Klogin from '../assets/KV/login.png'
+import show from '../assets/Logo/show.jpg'
 import { IotText, JunoText, KVText, MidText } from '../Text'
 const style = {
     width: '80%',
@@ -19,11 +20,11 @@ function Main(props) {
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">
                     <img
-                        alt=""
-                        src="/logo.svg"
+                        alt="missing"
+                        src={show}
                         width="30"
                         height="30"
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-top mr-2"
                     />
                 專案經歷
                 </Navbar.Brand>
