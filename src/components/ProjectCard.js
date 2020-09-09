@@ -18,9 +18,10 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 345,
-        borderTop:'.5px solid rgba(100,100,100,0.2)',
-        borderLeft:'.5px solid rgba(100,100,100,0.2)',
-        borderRight:'.5px solid rgba(100,100,100,0.2)',
+        borderTop: '.5px solid rgba(100,100,100,0.2)',
+        borderLeft: '.5px solid rgba(100,100,100,0.2)',
+        borderRight: '.5px solid rgba(100,100,100,0.2)',
+        height: '100%'
     },
     media: {
         height: 0,
@@ -67,7 +68,7 @@ const ProjectCard = (props) => {
                 <CardMedia
                     className={classes.media}
                     image={props.cover}
-                   
+
                 />
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
@@ -77,12 +78,7 @@ const ProjectCard = (props) => {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon />
-                    </IconButton>
-                    <IconButton aria-label="share">
-                        <ShareIcon />
-                    </IconButton>
+                    <button className="btn btn-primary" onClick={()=>props.show(props.avatar)}>專案詳細</button>
                     <IconButton
                         className={clsx(classes.expand, {
                             [classes.expandOpen]: expanded,
@@ -94,7 +90,7 @@ const ProjectCard = (props) => {
                         <ExpandMoreIcon />
                     </IconButton>
                 </CardActions>
-                <Collapse in={expanded} timeout="auto" unmountOnExit style={{height:'500px'}}>
+                <Collapse in={expanded} timeout="auto" unmountOnExit style={{ height: '500px' }}>
                     <CardContent>
                         <Typography paragraph>說明:</Typography>
                         <Typography paragraph>

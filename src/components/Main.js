@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar, Col } from 'react-bootstrap';
 import ProjectCard from './ProjectCard'
 import login from '../assets/IOT/Iot-login.jpg'
@@ -10,11 +10,59 @@ import java from '../assets/Logo/java.png'
 import Klogin from '../assets/KV/login.png'
 import show from '../assets/Logo/show.jpg'
 import { IotText, JunoText, KVText, MidText } from '../Text'
+import Content from './Content'
+import { CSSTransition } from 'react-transition-group'
 const style = {
     width: '80%',
     margin: '5rem auto'
 }
 function Main(props) {
+    const [isShow, setShow] = useState(true)
+    const [list, setList] = useState([])
+    const toggle = (event) => {
+        console.log(event)
+        switch (event) {
+            case "IOT":
+                setList([
+                    require("../assets/IOT/Iot-login.jpg"),
+                    require("../assets/IOT/IOT-01.png"),
+                    require("../assets/IOT/IOT-02.png"),
+                    require("../assets/IOT/IOT-03.png"),
+                    require("../assets/IOT/IOT-04.png"),
+                    require("../assets/IOT/IOT-05.png"),
+                ])
+                break;
+            case "Juno":
+                setList([
+                    require("../assets/Juno/Juno-login.png"),
+                    require("../assets/Juno/Juno-01.png"),
+                    require("../assets/Juno/Juno-02.png"),
+                    require("../assets/Juno/Juno-03.png"),
+                    require("../assets/Juno/Juno-04.png"),
+                    require("../assets/Juno/Juno-05.png"),
+                    require("../assets/Juno/Juno-06.png"),
+                    require("../assets/Juno/Juno-07.png"),
+                    require("../assets/Juno/Juno-08.png"),
+                ])
+                break;
+            case "KV":
+
+                break;
+            case "MID":
+                setList([
+                    require("../assets/MID/01.jpg"),
+                    require("../assets/MID/02.jpg"),
+                    require("../assets/MID/03.jpg"),
+                    require("../assets/MID/04.jpg"),
+                    require("../assets/MID/05.jpg"),
+                    require("../assets/MID/06.jpg"),
+                    require("../assets/MID/07.jpg"),
+                    require("../assets/MID/08.jpg"),
+                ])
+                break;
+        }
+        setShow(false)
+    }
     return (
         <div>
             <Navbar bg="dark" variant="dark">
@@ -29,7 +77,7 @@ function Main(props) {
                 專案經歷
                 </Navbar.Brand>
             </Navbar>
-            <div className="d-flex" style={style}>
+            {isShow ? <div className="d-flex" style={style}>
                 <Col>
                     <ProjectCard
                         cover={login}
@@ -38,6 +86,7 @@ function Main(props) {
                         makedate="Nov 14,2019"
                         action={vue}
                         width="30px"
+                        show={toggle}
                         title="內部機台數據網站，提供每個感測器觀看數據、搜尋數據、數據視覺化功能"
                         text={IotText}
                     />
@@ -50,6 +99,7 @@ function Main(props) {
                         makedate="March 14,2020"
                         action={reactimg}
                         width="30px"
+                        show={toggle}
                         title="內部數據改版網站，提供每個測站觀看數據、搜尋數據、數據視覺化功能"
                         text={JunoText}
                     />
@@ -62,6 +112,7 @@ function Main(props) {
                         makedate="March 14,2020"
                         action={java}
                         width="45px"
+                        show={toggle}
                         title="內部機台數據網站，提供每個感測器觀看數據、搜尋數據、數據視覺化功能"
                         text={KVText}
                     />
@@ -74,11 +125,18 @@ function Main(props) {
                         width="30px"
                         header="MID集點大聯盟"
                         makedate="March 14,2020"
+                        show={toggle}
                         title="娃娃機後台管理系統，提供管理服務，並由對方提供設計圖"
                         text={MidText}
                     />
                 </Col>
-            </div>
+            </div> : <div style={style} className="">
+                    <Content
+                        show={setShow}
+                        imglist={list}
+                    />
+                </div>}
+
 
         </div>
     );
