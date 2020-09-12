@@ -5,7 +5,7 @@ const Content = (props) => {
     return (
         <div className="d-flex w-100">
             <Col lg={8} className="p-0">
-                <Carousel interval={500} style={{ background: '#222' }}>
+                <Carousel interval={1500} style={{ background: '#222' }}>
                     {props.imglist.map(el =>
                         <Carousel.Item>
                             <InerImg img={el} />
