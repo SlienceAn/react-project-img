@@ -12,6 +12,7 @@ import show from '../assets/Logo/show.jpg'
 import { IotText, JunoText, KVText, MidText } from '../Text'
 import Content from './Content'
 import { CSSTransition } from 'react-transition-group'
+import '../assets/carousel.css'
 const style = {
     width: '80%',
     margin: '5rem auto'
@@ -19,6 +20,7 @@ const style = {
 function Main(props) {
     const [isShow, setShow] = useState(true)
     const [list, setList] = useState([])
+    const [text, setText] = useState([])
     const toggle = (event) => {
         console.log(event)
         switch (event) {
@@ -31,6 +33,7 @@ function Main(props) {
                     require("../assets/IOT/IOT-04.png"),
                     require("../assets/IOT/IOT-05.png"),
                 ])
+                setText(IotText)
                 break;
             case "Juno":
                 setList([
@@ -44,9 +47,24 @@ function Main(props) {
                     require("../assets/Juno/Juno-07.png"),
                     require("../assets/Juno/Juno-08.png"),
                 ])
+                setText(JunoText)
                 break;
             case "KV":
-
+                setList([
+                    require("../assets/KV/KV-02.png"),
+                    require("../assets/KV/KV-01.png"),
+                    require("../assets/KV/KV-04.png"),
+                    require("../assets/KV/KV-05.png"),
+                    require("../assets/KV/KV-05.png"),
+                    require("../assets/KV/KV-06.png"),
+                    require("../assets/KV/KV-07.png"),
+                    require("../assets/KV/KV-09.png"),
+                    require("../assets/KV/KV-10.png"),
+                    require("../assets/KV/KV-11.png"),
+                    require("../assets/KV/KV-12.png"),
+                    require("../assets/KV/KV-13.png"),
+                ])
+                setText(KVText)
                 break;
             case "MID":
                 setList([
@@ -59,6 +77,7 @@ function Main(props) {
                     require("../assets/MID/07.jpg"),
                     require("../assets/MID/08.jpg"),
                 ])
+                setText(MidText)
                 break;
         }
         setShow(false)
@@ -77,7 +96,7 @@ function Main(props) {
                 專案經歷
                 </Navbar.Brand>
             </Navbar>
-            {isShow ? <div className="d-flex" style={style}>
+            {isShow ? <div className="d-flex cards" style={style}>
                 <Col>
                     <ProjectCard
                         cover={login}
@@ -88,7 +107,6 @@ function Main(props) {
                         width="30px"
                         show={toggle}
                         title="內部機台數據網站，提供每個感測器觀看數據、搜尋數據、數據視覺化功能"
-                        text={IotText}
                     />
                 </Col>
                 <Col>
@@ -101,7 +119,6 @@ function Main(props) {
                         width="30px"
                         show={toggle}
                         title="內部數據改版網站，提供每個測站觀看數據、搜尋數據、數據視覺化功能"
-                        text={JunoText}
                     />
                 </Col>
                 <Col>
@@ -113,8 +130,7 @@ function Main(props) {
                         action={java}
                         width="45px"
                         show={toggle}
-                        title="內部機台數據網站，提供每個感測器觀看數據、搜尋數據、數據視覺化功能"
-                        text={KVText}
+                        title="內部機台數據網站，提供每個感測器觀看數據、搜尋數據、數據視覺化功能"                
                     />
                 </Col>
                 <Col>
@@ -126,14 +142,14 @@ function Main(props) {
                         header="MID集點大聯盟"
                         makedate="March 14,2020"
                         show={toggle}
-                        title="娃娃機後台管理系統，提供管理服務，並由對方提供設計圖"
-                        text={MidText}
+                        title="娃娃機後台管理系統，提供管理與訂單等多樣服務，並由對方提供設計圖"
                     />
                 </Col>
-            </div> : <div style={style} className="">
+            </div> : <div style={style} className="content">
                     <Content
                         show={setShow}
                         imglist={list}
+                        lists={text}
                     />
                 </div>}
 

@@ -68,36 +68,18 @@ const ProjectCard = (props) => {
                 <CardMedia
                     className={classes.media}
                     image={props.cover}
-
                 />
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        <ol>
-                            {props.text.map(el => <li>{el}</li>)}
-                        </ol>
+                        <h5><strong>{props.title}</strong></h5>
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <button className="btn btn-primary" onClick={()=>props.show(props.avatar)}>專案詳細</button>
-                    <IconButton
-                        className={clsx(classes.expand, {
-                            [classes.expandOpen]: expanded,
-                        })}
-                        onClick={handleExpandClick}
-                        aria-expanded={expanded}
-                        aria-label="show more"
-                    >
-                        <ExpandMoreIcon />
-                    </IconButton>
+                    <button className="btn btn-primary" onClick={() => props.show(props.avatar)}>
+                        <i className="fas fa-list-ul mr-2"></i>
+                        專案詳細
+                        </button>
                 </CardActions>
-                <Collapse in={expanded} timeout="auto" unmountOnExit style={{ height: '500px' }}>
-                    <CardContent>
-                        <Typography paragraph>說明:</Typography>
-                        <Typography paragraph>
-                            {props.title}
-                        </Typography>
-                    </CardContent>
-                </Collapse>
             </Card>
 
         </React.Fragment>

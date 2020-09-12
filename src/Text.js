@@ -1,6 +1,6 @@
 export const IotText = [
     '使用 vue-cli 建立專案，使用 .vue 進行模組化開發',
-    '使用 boostrap4進行版面排版',
+    '使用 boostrap4 CSS-flex 進行版面排版',
     '使用 axios 串接API，並使用 vuex 管理API回傳共同資料',
     '使用Vuex儲存共用狀態，並管理資料流向',
     '使用 v-router 進行路由切換，切換過度效果使用 vue-transition 製作',
@@ -23,5 +23,5 @@ export const MidText = [
     'html中使用cdn引入vue.js，使用 vue 開發',
     '使用Zeplin與對方設計師合作版面',
     '使用axios串接API，API由對方提供',
-    'bootstap4進行排版'
+    '使用bootstap4進行排版'
 ]
