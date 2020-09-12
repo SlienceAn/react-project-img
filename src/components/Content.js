@@ -13,8 +13,13 @@ const Content = (props) => {
                 </Carousel>
             </Col>
             <Col lg={4}>
-                <h5>專案說明</h5>
                 <div style={{ height: '85%' }}>
+                    <h5><i className="fas fa-pen" />-技術</h5>
+                    <ul>
+                        {props.skill.map(el => <li key={el}>{el}</li>)}
+                    </ul>
+                    <hr></hr>
+                    <h5><i className="	fas fa-tags" />-說明</h5>
                     <ul>
                         {props.lists.map(el => <li key={el}>{el}</li>)}
                     </ul>
@@ -23,7 +28,7 @@ const Content = (props) => {
                     <button className="btn btn-primary" onClick={() => props.show(true)}>
                         <i className=""></i>
                         返回
-                        </button>
+                    </button>
                 </div>
             </Col>
         </div>
@@ -32,7 +37,6 @@ const Content = (props) => {
 const InerImg = styled.div`
     height:700px;
     width:100%;
-    border:.5px solid #aaa;
     border-radius:1rem;
     background-image:${props => `url(${props.img})`};
     background-repeat:no-repeat;   

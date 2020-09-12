@@ -9,7 +9,7 @@ import reactimg from '../assets/Logo/react.jpg'
 import java from '../assets/Logo/java.png'
 import Klogin from '../assets/KV/login.png'
 import show from '../assets/Logo/show.jpg'
-import { IotText, JunoText, KVText, MidText } from '../Text'
+import { IotText, JunoText, KVText, MidText, IotSkill, JunoSkill, KVSkill, MidSkill } from '../Text'
 import Content from './Content'
 import { CSSTransition } from 'react-transition-group'
 import '../assets/carousel.css'
@@ -21,6 +21,7 @@ function Main(props) {
     const [isShow, setShow] = useState(true)
     const [list, setList] = useState([])
     const [text, setText] = useState([])
+    const [skill,setSkill] = useState([])
     const toggle = (event) => {
         console.log(event)
         switch (event) {
@@ -34,6 +35,7 @@ function Main(props) {
                     require("../assets/IOT/IOT-05.png"),
                 ])
                 setText(IotText)
+                setSkill(IotSkill)
                 break;
             case "Juno":
                 setList([
@@ -48,6 +50,7 @@ function Main(props) {
                     require("../assets/Juno/Juno-08.png"),
                 ])
                 setText(JunoText)
+                setSkill(JunoSkill)
                 break;
             case "KV":
                 setList([
@@ -65,6 +68,7 @@ function Main(props) {
                     require("../assets/KV/KV-13.png"),
                 ])
                 setText(KVText)
+                setSkill(KVSkill)
                 break;
             case "MID":
                 setList([
@@ -78,6 +82,7 @@ function Main(props) {
                     require("../assets/MID/08.jpg"),
                 ])
                 setText(MidText)
+                setSkill(MidSkill)
                 break;
         }
         setShow(false)
@@ -130,7 +135,7 @@ function Main(props) {
                         action={java}
                         width="45px"
                         show={toggle}
-                        title="內部機台數據網站，提供每個感測器觀看數據、搜尋數據、數據視覺化功能"                
+                        title="內部機台數據網站，提供每個感測器觀看數據、搜尋數據、數據視覺化功能"
                     />
                 </Col>
                 <Col>
@@ -150,6 +155,7 @@ function Main(props) {
                         show={setShow}
                         imglist={list}
                         lists={text}
+                        skill={skill}
                     />
                 </div>}
 
