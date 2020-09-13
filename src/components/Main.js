@@ -145,7 +145,7 @@ function Main(props) {
                         action={vue}
                         width="30px"
                         header="MID集點大聯盟"
-                        makedate="2020-3月"
+                        makedate="2019-3月"
                         show={toggle}
                         title="娃娃機後台管理系統，提供管理與訂單等多樣服務，並由對方提供設計圖"
                     />
