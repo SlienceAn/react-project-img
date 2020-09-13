@@ -107,7 +107,7 @@ function Main(props) {
                         cover={login}
                         avatar="IOT"
                         header="IOT微感資訊中心"
-                        makedate="Nov 14,2019"
+                        makedate="2019-11月"
                         action={vue}
                         width="30px"
                         show={toggle}
@@ -119,7 +119,7 @@ function Main(props) {
                         cover={Jlogin}
                         avatar="Juno"
                         header="Juno數據中心"
-                        makedate="March 14,2020"
+                        makedate="2020-3月"
                         action={reactimg}
                         width="30px"
                         show={toggle}
@@ -131,7 +131,7 @@ function Main(props) {
                         cover={Klogin}
                         avatar="KV"
                         header="榮總鋼瓶管理系統"
-                        makedate="March 14,2020"
+                        makedate="2019-2月"
                         action={java}
                         width="45px"
                         show={toggle}
@@ -145,7 +145,7 @@ function Main(props) {
                         action={vue}
                         width="30px"
                         header="MID集點大聯盟"
-                        makedate="March 14,2020"
+                        makedate="2020-3月"
                         show={toggle}
                         title="娃娃機後台管理系統，提供管理與訂單等多樣服務，並由對方提供設計圖"
                     />
