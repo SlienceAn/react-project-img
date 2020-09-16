@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Col } from 'react-bootstrap';
+import { Navbar, Col, Row } from 'react-bootstrap';
 import ProjectCard from './ProjectCard'
 import login from '../assets/IOT/Iot-login.jpg'
 import Jlogin from '../assets/Juno/Juno-login.png'
@@ -11,7 +11,6 @@ import Klogin from '../assets/KV/login.png'
 import show from '../assets/Logo/show.jpg'
 import { IotText, JunoText, KVText, MidText, IotSkill, JunoSkill, KVSkill, MidSkill } from '../Text'
 import Content from './Content'
-import { CSSTransition } from 'react-transition-group'
 import '../assets/carousel.css'
 const style = {
     width: '80%',
@@ -21,7 +20,7 @@ function Main(props) {
     const [isShow, setShow] = useState(true)
     const [list, setList] = useState([])
     const [text, setText] = useState([])
-    const [skill,setSkill] = useState([])
+    const [skill, setSkill] = useState([])
     const toggle = (event) => {
         console.log(event)
         switch (event) {
@@ -101,20 +100,8 @@ function Main(props) {
                 專案經歷
                 </Navbar.Brand>
             </Navbar>
-            {isShow ? <div className="d-flex cards" style={style}>
-                <Col>
-                    <ProjectCard
-                        cover={login}
-                        avatar="IOT"
-                        header="IOT微感資訊中心"
-                        makedate="2019-11月"
-                        action={vue}
-                        width="30px"
-                        show={toggle}
-                        title="內部機台數據網站，提供每個感測器觀看數據、搜尋數據、數據視覺化功能"
-                    />
-                </Col>
-                <Col>
+            {isShow ? <Row className="cards" style={style}>
+                <Col lg={3} md={6} xs={12} className="mb-2">
                     <ProjectCard
                         cover={Jlogin}
                         avatar="Juno"
@@ -126,19 +113,19 @@ function Main(props) {
                         title="內部數據改版網站，提供每個測站觀看數據、搜尋數據、數據視覺化功能"
                     />
                 </Col>
-                <Col>
+                <Col lg={3} md={6} xs={12} className="mb-2">
                     <ProjectCard
-                        cover={Klogin}
-                        avatar="KV"
-                        header="榮總鋼瓶管理系統"
-                        makedate="2019-2月"
-                        action={java}
-                        width="45px"
+                        cover={login}
+                        avatar="IOT"
+                        header="IOT微感資訊中心"
+                        makedate="2019-11月"
+                        action={vue}
+                        width="30px"
                         show={toggle}
                         title="內部機台數據網站，提供每個感測器觀看數據、搜尋數據、數據視覺化功能"
                     />
                 </Col>
-                <Col>
+                <Col lg={3} md={6} xs={12} className="mb-2">
                     <ProjectCard
                         cover={Mlogin}
                         avatar="MID"
@@ -150,7 +137,19 @@ function Main(props) {
                         title="娃娃機後台管理系統，提供管理與訂單等多樣服務，並由對方提供設計圖"
                     />
                 </Col>
-            </div> : <div style={style} className="content">
+                <Col lg={3} md={6} xs={12} className="mb-2">
+                    <ProjectCard
+                        cover={Klogin}
+                        avatar="KV"
+                        header="榮總鋼瓶管理系統"
+                        makedate="2019-2月"
+                        action={java}
+                        width="45px"
+                        show={toggle}
+                        title="內部機台數據網站，提供每個感測器觀看數據、搜尋數據、數據視覺化功能"
+                    />
+                </Col>
+            </Row> : <div style={style} className="content">
                     <Content
                         show={setShow}
                         imglist={list}
@@ -158,8 +157,6 @@ function Main(props) {
                         skill={skill}
                     />
                 </div>}
-
-
         </div>
     );
 }

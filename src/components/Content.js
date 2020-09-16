@@ -12,21 +12,21 @@ const Content = (props) => {
                         </Carousel.Item>)}
                 </Carousel>
             </Col>
-            <Col lg={4}>
+            <Col lg={4} style={{paddingLeft:'2.5rem'}}>
                 <div style={{ height: '85%' }}>
-                    <h5><i className="fas fa-pen" />-技術</h5>
+                    <h2><i className="fas fa-pen" /><strong>-技術</strong></h2>
                     <ul>
                         {props.skill.map(el => <li key={el}>{el}</li>)}
                     </ul>
                     <hr></hr>
-                    <h5><i className="	fas fa-tags" />-說明</h5>
+                    <h2><i className="fas fa-tags" /><strong>-說明</strong></h2>
                     <ul>
                         {props.lists.map(el => <li key={el}>{el}</li>)}
                     </ul>
                 </div>
-                <div>
-                    <button className="btn btn-primary" onClick={() => props.show(true)}>
-                        <i className=""></i>
+                <div className="d-flex justify-content-end">
+                    <button className="btn btn-dark" onClick={() => props.show(true)}>
+                        <i className="fas fa-angle-double-left mr-2"/>
                         返回
                     </button>
                 </div>

@@ -1,5 +1,5 @@
 export const IotSkill = [
-    '前端 : HTML / CSS / JavaScript',
+    '前端   :   HTML / CSS / JavaScript',
     'CSS Framework : Bootstrap 4',
     'JS Framework : Vue / Vue-router',
     '狀態管理 : Vuex',
@@ -28,10 +28,10 @@ export const JunoSkill = [
     'Debug tool : React Developer Tools / Redux DevTools'
 ]
 export const JunoText = [
-    '使用create-react-app建立專案，',
+    '使用 create-react-app建立專案，',
     '使用 react-bootsrap 與 styled-component 進行排版與RWD製作',
     '使用 axios 串接API，並使用 useState 保存參數，useEffect 渲染資料',
-    '使用  react-router-dom 進行路由切換，並使用 useContext 共用路由參數',
+    '使用 react-router-dom 進行路由切換，並使用 useContext 共用路由參數',
     '使用 redux 進行狀態管理，將相同查詢條件與測項保存，方便使用者快速觀看數據',
     '使用 hightchart.js 結合 react 做資料圖表，並且使用 react-leaflet 製作google地圖'
 ]
@@ -41,7 +41,7 @@ export const KVSkill = [
     '後端 : JSP',
     '資料庫 : MSSQL',
     '編輯器 : NetBeans 8.2',
-    '第三方套件 : '
+    '第三方套件 :JQuery.qrcode.js '
 ]
 export const KVText = [
     '使用 netBeans 建立專案',

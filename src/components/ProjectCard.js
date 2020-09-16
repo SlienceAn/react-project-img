@@ -48,11 +48,11 @@ const ProjectCard = (props) => {
         <React.Fragment>
             <Card className={classes.root}>
                 <CardHeader
-                    avatar={
-                        <Avatar aria-label="recipe" className={classes.avatar}>
-                            {props.avatar}
-                        </Avatar>
-                    }
+                    // avatar={
+                    //     <Avatar aria-label="recipe" className={classes.avatar}>
+                    //         {props.avatar}
+                    //     </Avatar>
+                    // }
                     action={
                         <IconButton aria-label="settings">
                             <img src={props.action} style={{ width: `${props.width}` }} />
