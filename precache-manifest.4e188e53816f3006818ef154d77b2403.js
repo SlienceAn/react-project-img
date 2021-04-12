@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dd0aeaabf3e451e1ac357871cdb5a1c7",
+    "revision": "53b9e3ade182bb184278842bfb1e437f",
     "url": "/react-project-img/index.html"
   },
   {
-    "revision": "cf52e0f6868b0a6bae7c",
+    "revision": "5d8a53202e245918fdef",
     "url": "/react-project-img/static/css/main.01a901ee.chunk.css"
   },
   {
-    "revision": "2b34aba0c73acaab0746",
-    "url": "/react-project-img/static/js/2.988ba677.chunk.js"
+    "revision": "f280af42408584c027b9",
+    "url": "/react-project-img/static/js/2.7c396484.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/react-project-img/static/js/2.988ba677.chunk.js.LICENSE.txt"
+    "url": "/react-project-img/static/js/2.7c396484.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cf52e0f6868b0a6bae7c",
-    "url": "/react-project-img/static/js/main.eb15530f.chunk.js"
+    "revision": "5d8a53202e245918fdef",
+    "url": "/react-project-img/static/js/main.809cd27a.chunk.js"
   },
   {
     "revision": "b032c62c3bda59c7f217",
@@ -80,40 +80,68 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-project-img/static/media/Iot-login.f0b98eb5.jpg"
   },
   {
-    "revision": "1e946203b84ad29ee0364b5b1c6a9173",
-    "url": "/react-project-img/static/media/Juno-01.1e946203.png"
+    "revision": "1939bd75e941ab17b267aeddcdeaccfc",
+    "url": "/react-project-img/static/media/Juno-01.1939bd75.png"
   },
   {
-    "revision": "c6b8d923f3a4dc85c63c423b3ebf9ccd",
-    "url": "/react-project-img/static/media/Juno-02.c6b8d923.png"
+    "revision": "b6bb27f59d8a132befbbdad9bb61306e",
+    "url": "/react-project-img/static/media/Juno-02.b6bb27f5.png"
   },
   {
-    "revision": "c7e9141ca1484e46ddce128e3f20e648",
-    "url": "/react-project-img/static/media/Juno-03.c7e9141c.png"
+    "revision": "55bef141bd1e1425c013df9fd2c21a93",
+    "url": "/react-project-img/static/media/Juno-03.55bef141.png"
   },
   {
-    "revision": "852cda82e1dde6b4cc4ce89fd07fbec3",
-    "url": "/react-project-img/static/media/Juno-04.852cda82.png"
+    "revision": "32866fb12a4a3330fb4eb6065ab4f598",
+    "url": "/react-project-img/static/media/Juno-04.32866fb1.png"
   },
   {
-    "revision": "47091e21b24181c21a029ac90759ca24",
-    "url": "/react-project-img/static/media/Juno-05.47091e21.png"
+    "revision": "53161f8061d0f5df14e127387ef8ba13",
+    "url": "/react-project-img/static/media/Juno-05.53161f80.png"
   },
   {
-    "revision": "4dbf137487ae9bb9da6e141422d3db32",
-    "url": "/react-project-img/static/media/Juno-06.4dbf1374.png"
+    "revision": "55ab1a6ea0e717b9bbb2b9313af4d201",
+    "url": "/react-project-img/static/media/Juno-06.55ab1a6e.png"
   },
   {
-    "revision": "06ba8eb8582602a3fd833b883edeb7f6",
-    "url": "/react-project-img/static/media/Juno-07.06ba8eb8.png"
+    "revision": "d76b4db510d57fb865cf0721723eeed5",
+    "url": "/react-project-img/static/media/Juno-07.d76b4db5.png"
   },
   {
-    "revision": "d4665276b4499dbb1d2b391964a74b9a",
-    "url": "/react-project-img/static/media/Juno-08.d4665276.png"
+    "revision": "11cc8a0c5f6b27149941bf49c5cc578b",
+    "url": "/react-project-img/static/media/Juno-08.11cc8a0c.png"
   },
   {
-    "revision": "4593730fd3b36e0211894914325ac530",
-    "url": "/react-project-img/static/media/Juno-login.4593730f.png"
+    "revision": "7ecab88122c738d75f2f12a70142f80d",
+    "url": "/react-project-img/static/media/Juno-09.7ecab881.png"
+  },
+  {
+    "revision": "cbb26ec9fa3d46f14a356d50f78eadb9",
+    "url": "/react-project-img/static/media/Juno-10.cbb26ec9.png"
+  },
+  {
+    "revision": "6abbe8a876d837398f28f600e76334b4",
+    "url": "/react-project-img/static/media/Juno-11.6abbe8a8.png"
+  },
+  {
+    "revision": "fb5fb870b7602d7cb9ecf5d513a97e20",
+    "url": "/react-project-img/static/media/Juno-12.fb5fb870.png"
+  },
+  {
+    "revision": "862c27d1e23738e554a8e261a13cb337",
+    "url": "/react-project-img/static/media/Juno-13.862c27d1.png"
+  },
+  {
+    "revision": "98b55aa0b2dc099a687f303f97dfd650",
+    "url": "/react-project-img/static/media/Juno-14.98b55aa0.png"
+  },
+  {
+    "revision": "e76f165602e2a76e62782751c52e1862",
+    "url": "/react-project-img/static/media/Juno-15.e76f1656.png"
+  },
+  {
+    "revision": "a86c6060084774f0bf554531371de521",
+    "url": "/react-project-img/static/media/Juno-16.a86c6060.png"
   },
   {
     "revision": "7170b985605d7f44659dd44612d53c41",
